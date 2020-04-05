@@ -1,0 +1,129 @@
+class Animals:
+  def eat(self):
+    print('Покормили всех животных!')
+class Goose:
+  def name(self):
+    self.name_white = 'Белый'
+    self.name_grey = 'Серый'
+    print (f'Наших гусей зовут: {self.name_white} {self.name_grey}')
+  def weight(self):
+    self.weight_white = 7
+    self.weight_grey = 8
+    return (int(self.weight_white)) + (int(self.weight_grey))
+  def speak(self):
+    print('Гуси говорят: "Га-га-га"')
+  def collect_eggs(self):
+    print('Собрали яйца у гусей "Серый и Белый')
+  
+class Cow:
+  def name(self):
+    self.name_cow = 'Манька'
+  def weight(self):
+    self.weight_cow = 400
+    return (int(self.weight_cow))
+  def speak(self):
+    print('Корова говорит: "Муууу"')
+  def collect_milk(self):
+    print('Собрали молоко у коровы "Манька"')
+
+class Goat:
+  def name(self):
+    self.name_roga = 'Рога'
+    self.name_kopita = 'Копыта'
+    print(f'Наших коз зовут {self.name_roga} и {self.name_kopita}')
+  def speak(self):
+    print('Козы говорят:"Мееее"')
+  def collect_milk(self):
+    print(f'Собрали молоко у коз {self.name_roga} и {self.name_kopita}')
+  def weight(self):
+    self.weight_roga = 53
+    self.weight_kopita = 50
+    return (int( self.weight_roga)) + (int(self.weight_kopita))
+
+
+class Sheep:
+  def name(self):
+    self.name_bara = 'Барашек'
+    self.name_kudri = 'Кудрявый'
+    print(f'Наших барашков зовут {self.name_bara} и {self.name_kudri}')
+  def weight(self):
+    self.weight_bara = 39
+    self.weight_kudri = 43
+    return  (int( self.weight_bara)) + (int(self.weight_kudri))
+  def speak(self):
+    print('Барашки говорят:"Беееее"')
+  def haircut(self):
+    print('Подстригли барашков: "Барашек и Кудрявый"')
+
+class Chicken:
+  def name(self):
+    self.name_koko = 'Ко-Ко'
+    self.name_kukarek = 'Кукареку'
+    print(f'Наших кур зовут {self.name_koko} и {self.name_kukarek}')
+  def weight(self):
+    self.weight_koko = 4
+    self.weight_kukarek = 6
+    return  (int(self.weight_koko)) + (int(self.weight_kukarek))
+  def speak(self):
+    print('Куры говорят:"Ко-Ко-Ко-Ко"')
+  def collect_eggs(self):
+    print('Собрали яйца у кур: "Кукареку и Коко"')  
+
+class Duck:
+  def name(self):
+    self.name_duck = 'Кряква'
+    print(f'Нашу утку зовут {self.name_duck}')
+  def weight(self):
+    self.weight_duck = 5
+    return  (int(self.weight_duck))
+  def speak(self):
+    print('Утка говорит: "Кря-Кря-Кря"')
+  def collect_eggs(self):
+    print('Собрали яйца у утки: "Кряква"')
+
+#animals = Animals()
+#animals.eat()
+
+gos = Goose()
+#gos.name()
+gos.weight()
+#gos.speak()
+#gos.collect_eggs()
+
+
+cow = Cow()
+#cow.name()
+cow.weight()
+#cow.speak()
+#cow.collect_milk()
+
+goat = Goat()
+#goat.name()
+goat.weight()
+#goat.speak()
+#goat.collect_milk()
+
+
+sheep = Sheep()
+#sheep.name()
+sheep.weight()
+#sheep.speak()
+#sheep.haircut()
+
+chicken = Chicken()
+#chicken.name()
+chicken.weight()
+#chicken.speak()
+#chicken.collect_eggs()
+
+
+duck = Duck()
+#duck.name()
+duck.weight()
+#duck.speak()
+#duck.collect_eggs()
+
+print(f'Общий вес животных составляет: {cow.weight() + gos.weight() + goat.weight() + sheep.weight() + chicken.weight() + duck.weight()}кг.')
+
+animal_max = [gos.weight(), cow.weight(), goat.weight(), sheep.weight(), chicken.weight(), duck.weight()]
+print(f'Самый тяжелый из них имеет вес: {max(animal_max)} кг.')
